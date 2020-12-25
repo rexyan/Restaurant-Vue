@@ -1,4 +1,4 @@
-# mintshop-client
+# Restaurant-Vue
 
 > Mintshop client project
 
