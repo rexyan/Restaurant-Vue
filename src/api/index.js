@@ -3,7 +3,7 @@
 */
 import ajax from './ajax'
 // const BASE_URL = 'http://local:4000'
-const BASE_URL = 'http://localhost:8090/api'
+const BASE_URL = 'http://localhost:9000/api'
 /**
  * 获取地址信息(根据经纬度串)
  * 这个接口的经纬度参数是在url路径里的，没有query参数
@@ -30,11 +30,11 @@ export const reqPwdLogin = (name, pwd, id, value) => ajax(BASE_URL + '/login_pwd
 /**
  * 获取短信验证码
  */
-export const reqSendCode = phone => ajax(BASE_URL + '/sendcode', {phone})
+export const reqSendCode = phone => ajax(BASE_URL + '/sendSms', {phone})
 /**
  * 手机号验证码登录
  */
-export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/login_sms', {phone, code}, 'POST')
+export const reqSmsLogin = (phone, code) => ajax(BASE_URL + '/smsLogin', {phone, code}, 'POST')
 
 export const reqCaptcha = () => ajax(BASE_URL + '/captcha')
 

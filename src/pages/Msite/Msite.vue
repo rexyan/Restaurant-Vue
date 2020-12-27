@@ -147,7 +147,7 @@ export default {
   .msite  //首页
     width 100%
     .header
-      background-color #02a774
+      background-color #48aff0
       position fixed
       z-index 100
       left 0

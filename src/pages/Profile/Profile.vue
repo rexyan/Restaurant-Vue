@@ -166,7 +166,7 @@ export default {
     width 100%
     overflow hidden
     .header //头部公共css
-      background-color #02a774
+      background-color #48aff0
       position fixed
       z-index 100
       left 0
@@ -198,7 +198,7 @@ export default {
         clearFix()
         position relative
         display block
-        background #02a774
+        background #76bdea
         padding 20px 10px
         .profile_image
           float left
@@ -276,7 +276,7 @@ export default {
             padding 15px 5px 10px
             span
               display inline-block
-              font-size 30px
+              font-size 22px
               color #f90
               font-weight 700
               line-height 30px
@@ -322,7 +322,7 @@ export default {
         .my_order_div
           width 100%
           border-bottom 1px solid #f1f1f1
-          padding 18px 10px 18px 0
+          padding 18px 10px 18px 10px
           font-size 16px
           color #333
           display flex

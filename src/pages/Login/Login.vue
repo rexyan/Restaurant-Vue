@@ -74,12 +74,15 @@ export default {
       alertShow: false // 是否显示警告框
     }
   },
-
+  mounted(){
+    this.getCaptcha()
+  },
   computed: {
     rightPhone () {
       // 利用正则对手机号进行匹配，返回布尔值
       return /^1\d{10}$/.test(this.phone)
     }
+
   },
 
   methods: {
@@ -184,8 +187,8 @@ export default {
     // 获取一个新的图片验证码
     async getCaptcha () {
       const result = await reqCaptcha()
-      this.captcha = result.data.captcha_result.base_64_blob
-      this.captchaId = result.data.captcha_result.id
+      this.captcha = result.data.b64s
+      this.captchaId = result.data.id
     }
   },
   components: {
@@ -207,7 +210,7 @@ export default {
         .login_logo
           font-size 40px
           font-weight bold
-          color #02a774
+          color #48aff0
           text-align center
         .login_header_title
           padding-top 40px
@@ -219,9 +222,9 @@ export default {
             &:first-child
               margin-right 40px
             &.on
-              color #02a774
+              color #76bdea
               font-weight 700
-              border-bottom 2px solid #02a774
+              border-bottom 2px solid #76bdea
       .login_content
         >form
           >div
@@ -238,7 +241,7 @@ export default {
               outline 0
               font 400 14px Arial
               &:focus
-                border 1px solid #02a774
+                border 1px solid #76bdea
             .login_message
               position relative
               margin-top 16px
@@ -282,7 +285,7 @@ export default {
                     float right
                     color #ddd
                 &.on
-                  background #02a774
+                  background #76bdea
                 >.switch_circle
                   //transform translateX(27px)
                   position absolute
@@ -303,14 +306,14 @@ export default {
               font-size 14px
               line-height 20px
               >a
-                color #02a774
+                color #76bdea
           .login_submit
             display block
             width 100%
             height 42px
             margin-top 30px
             border-radius 4px
-            background #4cd96f
+            background #76bdea
             color #fff
             text-align center
             font-size 16px
